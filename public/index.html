@@ -11,17 +11,22 @@
         <form method="POST">
             <label for="movieName">Enter Movie Title</label>
             <input id="movieName" type="text">
-
             <label for="movieRating">Enter Rating</label>
             <select id="movieRating" name="movieRating">
-                <option value="1">One Star</option>
-                <option value="2">Two Star</option>
-                <option value="3">Three Star</option>
-                <option value="4">Four Star</option>
-                <option value="5">Five Star</option>
-
+                <option class="star">How many stars do you give this movie?</option>
+                <option class="star" value="1">One Star</option>
+                <option class="star" value="2">Two Star</option>
+                <option class="star" value="3">Three Star</option>
+                <option class="star" value="4">Four Star</option>
+                <option class="star" value="5">Five Star</option>
             </select>
-            <button type="submit">Submit</button>
+            <button id="submit" type="submit">Submit</button>
+        </form>
+        <br>
+        <form action="POST">
+            <label for="editMovies">Select a Movie to Edit</label>
+            <select name="editMovie" id="editMovies"></select>
+            <button id="editSubmit" type="submit">Submit</button>
         </form>
         <br>
         <div id="movies">
