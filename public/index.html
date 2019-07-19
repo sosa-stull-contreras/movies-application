@@ -8,8 +8,25 @@
 <body>
 
     <div class="container">
-        <h1>Hello There!</h1>
-        <p>To get started, edit <code>src/index.js</code>.</p>
+        <form method="POST">
+            <label for="movieName">Enter Movie Title</label>
+            <input id="movieName" type="text">
+
+            <label for="movieRating">Enter Rating</label>
+            <select id="movieRating" name="movieRating">
+                <option value="1">One Star</option>
+                <option value="2">Two Star</option>
+                <option value="3">Three Star</option>
+                <option value="4">Four Star</option>
+                <option value="5">Five Star</option>
+
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+        <br>
+        <div id="movies">
+            <h3>Loading...</h3>
+        </div>
     </div>
 
     <script src="./main.js"></script>
