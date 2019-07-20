@@ -2,18 +2,18 @@
   "movies": [
     {
       "title": "Casablanca",
-      "rating": "5",
+      "rating": "3",
       "id": 1
     },
     {
       "title": "Star Wars: A New Hope",
-      "rating": "4",
+      "rating": "2",
       "id": 2
     },
     {
-      "title": "Children of Men",
-      "rating": "3",
-      "id": 3
+      "title": "matrix",
+      "rating": "2",
+      "id": 5
     }
   ]
 }

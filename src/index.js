@@ -10,6 +10,7 @@ const $ = require('jquery');
 let editMovie;
 let movieRating;
 let editRating;
+let deleteMovieData;
 
 console.log(getMovies());
 
@@ -64,8 +65,9 @@ $('#submit').click(function (e) {
   };
   fetch(url, options)
       .then(movies)
-      .then(editMovies);
-  $('#movieName').val('');
+      .then(editMovies)
+      .then(deleteMovies);
+    $('#movieName').val('');
   $('#movieRating').val('');
 });
 
@@ -97,10 +99,10 @@ editMovies();
 //Updates json with new star rating
 $('#editSubmit').click(function (e) {
     e.preventDefault();
-getMovies().then((movies) => {
-    movies.forEach(({title, rating, id}) => {
+getMovies().then((moviesdata) => {
+    moviesdata.forEach(({title, rating, id}) => {
         if(editMovie===title){
-            console.log('i found a match')
+            // console.log('i found a match')
 
 
             const userMovies = {
@@ -117,32 +119,63 @@ getMovies().then((movies) => {
                };
                fetch(url, options)
                    .then(movies)
-                   .then(editMovies);
-
-
-
+                   .then(editMovies)
+                   .then(deleteMovies);
 
 
 
         }
     });
 });
-
-
-  // const userMovies = {
-  //   //   title: editMovie,
-  //   //   rating: editRating
-  //   // };
-  //   // const url = '/api/movies/';
-  //   // const options = {
-  //   //   method: 'PATCH',
-  //   //   headers: {
-  //   //     'Content-Type': 'application/json'
-  //   //   },
-  //   //   body: JSON.stringify(userMovies)
-  //   // };
-  //   // fetch(url, options)
-  //   //     .then(movies)
-  //   //     .then(editMovies);
 });
 
+const deleteMovies = () =>
+    getMovies().then((movies) => {
+        // console.log('Here are all the movies:');
+        $('#deleteMovies').html ("");
+        let movieDelete = "<option>pick a movie to delete</option>";
+        movies.forEach(({title, rating, id}) => {
+            movieDelete +=`<option value="${title}">${title}</option>`;
+        });
+        $(movieDelete).appendTo('#deleteMovies')
+    })
+    //gets value for movies option tag
+        .then($("select#deleteMovies").change(function(){
+            deleteMovieData = $(this).children("option:selected").val();
+            console.log(deleteMovieData)
+        }))
+        .catch((error) => {
+            console.log(error);
+        });
+deleteMovies();
+
+
+
+$('#deleteSubmit').click(function (e) {
+    e.preventDefault();
+    getMovies().then((moviesdata) => {
+        moviesdata.forEach(({title, rating, id}) => {
+            if(deleteMovieData===title){
+                // console.log('i found a match')
+
+
+                const userMovies = {
+                    title: title,
+                    rating: rating
+                };
+                const url = '/api/movies/'+id;
+                const options = {
+                    method: 'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(userMovies)
+                };
+                fetch(url, options)
+                    .then(movies)
+                    .then(editMovies)
+                    .then(deleteMovies);
+            }
+        });
+    });
+});
