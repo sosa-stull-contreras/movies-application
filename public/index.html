@@ -23,9 +23,19 @@
             <button id="submit" type="submit">Submit</button>
         </form>
         <br>
-        <form action="POST">
+        <form>
             <label for="editMovies">Select a Movie to Edit</label>
             <select name="editMovie" id="editMovies"></select>
+
+            <label for="editRating">Select new Star Rating</label>
+            <select id="editRating" name="movieRating">
+                <option class="star">How many stars do you give this movie?</option>
+                <option class="star" value="1">One Star</option>
+                <option class="star" value="2">Two Star</option>
+                <option class="star" value="3">Three Star</option>
+                <option class="star" value="4">Four Star</option>
+                <option class="star" value="5">Five Star</option>
+            </select>
             <button id="editSubmit" type="submit">Submit</button>
         </form>
         <br>
