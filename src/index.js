@@ -33,6 +33,7 @@ movies();
 //Function gets value from star ratings
 $("select#movieRating").change(function(){
   movieRating = $(this).children("option:selected").val();
+  movieRating.then($("#submit").removeAttr("disabled"));
 });
 
 
@@ -40,7 +41,6 @@ $("select#movieRating").change(function(){
 //Function gets value for edit star ratings
 $("select#editRating").change(function(){
   editRating = $(this).children("option:selected").val();
-  console.log(editRating)
 });
 
 
@@ -49,8 +49,6 @@ $("select#editRating").change(function(){
 $('#submit').click(function (e) {
   e.preventDefault();
   const movieTitle = $('#movieName').val();
-  // console.log(movieTitle);
-  // console.log(movieRating);
   const userMovies = {
     title: movieTitle,
     rating: movieRating
@@ -67,10 +65,11 @@ $('#submit').click(function (e) {
       .then(movies)
       .then(editMovies)
       .then(deleteMovies);
-    $('#movieName').val('');
+  $('#movieName').val('');
   $('#movieRating').val('');
 });
 
+// $('#editSubmit').attr('disabled', true);
 
 
 //Edit the star rating for movies
@@ -82,7 +81,7 @@ const editMovies = () =>
       movies.forEach(({title, rating, id}) => {
         movieEdit +=`<option value="${title}">${title}</option>`;
       });
-      $(movieEdit).appendTo('#editMovies')
+      $(movieEdit).appendTo('#editMovies').then($("#editSubmit").removeAttr("disabled"))
     })
         //gets value for movies option tag
         .then($("select#editMovies").change(function(){
@@ -95,7 +94,6 @@ const editMovies = () =>
 editMovies();
 
 
-
 //Updates json with new star rating
 $('#editSubmit').click(function (e) {
     e.preventDefault();
@@ -103,8 +101,6 @@ getMovies().then((moviesdata) => {
     moviesdata.forEach(({title, rating, id}) => {
         if(editMovie===title){
             // console.log('i found a match')
-
-
             const userMovies = {
                  title: editMovie,
                  rating: editRating
@@ -121,14 +117,12 @@ getMovies().then((moviesdata) => {
                    .then(movies)
                    .then(editMovies)
                    .then(deleteMovies);
-
-
-
-        }
+            }
+        });
     });
 });
-});
 
+//Lets you delete a movie
 const deleteMovies = () =>
     getMovies().then((movies) => {
         // console.log('Here are all the movies:');
@@ -137,7 +131,7 @@ const deleteMovies = () =>
         movies.forEach(({title, rating, id}) => {
             movieDelete +=`<option value="${title}">${title}</option>`;
         });
-        $(movieDelete).appendTo('#deleteMovies')
+        $(movieDelete).appendTo('#deleteMovies').then($("#deleteSubmit").removeAttr("disabled"))
     })
     //gets value for movies option tag
         .then($("select#deleteMovies").change(function(){
@@ -150,15 +144,12 @@ const deleteMovies = () =>
 deleteMovies();
 
 
-
+//Deletes a movie on submit
 $('#deleteSubmit').click(function (e) {
     e.preventDefault();
     getMovies().then((moviesdata) => {
         moviesdata.forEach(({title, rating, id}) => {
             if(deleteMovieData===title){
-                // console.log('i found a match')
-
-
                 const userMovies = {
                     title: title,
                     rating: rating
