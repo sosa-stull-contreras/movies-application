@@ -12,6 +12,22 @@ let movieRating;
 let editRating;
 let deleteMovieData;
 
+const compare = (a, b) => {
+    // Use toUpperCase() to ignore character casing
+    const titleA = a.title.toUpperCase();
+    const titleB = b.title.toUpperCase();
+
+    let comparison = 0;
+    if (titleA > titleB) {
+        comparison = 1;
+    } else if (titleA < titleB) {
+        comparison = -1;
+    }
+    return comparison;
+};
+
+
+
 console.log(getMovies());
 
 //Function populates movie list
@@ -19,6 +35,7 @@ const movies = () =>
     getMovies().then((movies) => {
   $('#movies').html ("");
   let moviepost = "";
+  moviepost += '<h2>Here are the movies!</h2>';
   movies.forEach(({title, rating, id}) => {
     moviepost +=`<div>${title} - Rating: ${rating}</div>`;
   });
