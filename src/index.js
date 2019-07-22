@@ -13,6 +13,10 @@ let editRating;
 let deleteMovieData;
 
 
+//Capitalize Letter
+const capitalizeFirstLetter = (string) => string.charAt(0).toUpperCase() + string.slice(1);
+
+
 //Function populates movie list
 const movies = () =>
     getMovies().then((movies) => {
@@ -55,7 +59,8 @@ $("select#editRating").change(function(){
 //Posts data to the json, updates movies
 $('#submit').click(function (e) {
   e.preventDefault();
-  const movieTitle = $('#movieName').val();
+  let movieTitle = $('#movieName').val();
+  capitalizeFirstLetter(movieTitle);
   if(movieTitle !=='' && movieRating !== 'How many stars do you give this movie?') {
     addMovie(movieTitle, movieRating)
         .then(movies)
