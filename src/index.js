@@ -4,7 +4,7 @@
 /**
  * require style imports
  */
-const {getMovies} = require('./api.js');
+const {getMovies, addMovie, editStars, editTitleStars, editTitle, deleteMovie} = require('./api.js');
 const $ = require('jquery');
 
 let editMovie;
@@ -13,16 +13,10 @@ let editRating;
 let deleteMovieData;
 
 
-console.log(getMovies());
-
-
-
-
 //Function populates movie list
 const movies = () =>
     getMovies().then((movies) => {
   $('#movies').html ("");
-
 // function that sorts the array alphabetically
             const sortArray =
             movies.sort(function (a, b) {
@@ -33,29 +27,23 @@ const movies = () =>
                 else{
                     return 0;}
             });
-
-
-        let moviepost = "";
-  moviepost += '<h2>Here are the movies!</h2>';
+        let moviePost = "";
+  moviePost += '<h2>Here are the movies!</h2>';
   sortArray.forEach(({title, rating, id}) => {
-    moviepost +=`<div>${title} - Rating: ${rating}</div>`;
-      console.log(moviepost)
-
+    moviePost +=`<div>${title} - Rating: ${rating}</div>`;
   });
-  $(moviepost).appendTo('#movies')
+  $(moviePost).appendTo('#movies')
 }).catch((error) => {
   console.log(error);
 });
 movies();
 
 
-
 //Function gets value from star ratings
 $("select#movieRating").change(function(){
   movieRating = $(this).children("option:selected").val();
-  movieRating.then($("#submit").removeAttr("disabled"));
+  $("#submit").removeAttr("disabled");
 });
-
 
 
 //Function gets value for edit star ratings
@@ -63,42 +51,25 @@ $("select#editRating").change(function(){
   editRating = $(this).children("option:selected").val();
 });
 
-console.log(editRating)
 
 //Posts data to the json, updates movies
 $('#submit').click(function (e) {
   e.preventDefault();
   const movieTitle = $('#movieName').val();
-  if(movieTitle!=='' && movieRating !== 'How many stars do you give this movie?') {
-      let userMovies = {
-          title: movieTitle,
-          rating: movieRating
-      };
-
-      const url = '/api/movies';
-      const options = {
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(userMovies)
-      };
-
-      fetch(url, options)
-          .then(movies)
-          .then(editMovies)
-          .then(deleteMovies);
+  if(movieTitle !=='' && movieRating !== 'How many stars do you give this movie?') {
+    addMovie(movieTitle, movieRating)
+        .then(movies)
+        .then(editMovies)
+        .then(deleteMovies);
       $('#movieName').val('');
-      $('#movieRating').val('');
+      $('#movieRating').val('How many stars do you give this movie?');
   }
 });
-
 
 
 //Edit the star rating for movies
 const editMovies = () =>
     getMovies().then((movies) => {
-
         const sortArray =
             movies.sort(function (a, b) {
                 if (a.title < b.title){
@@ -120,7 +91,6 @@ const editMovies = () =>
         //gets value for movies option tag
         .then($("select#editMovies").change(function(){
           editMovie = $(this).children("option:selected").val();
-          console.log(editMovie)
         }))
         .catch((error) => {
       console.log(error);
@@ -132,30 +102,14 @@ editMovies();
 $('#editSubmit').click(function (e) {
     e.preventDefault();
     $('#movieDetails').html("");
-
     const movieTitleEdit = $('#movieNameEdit').val();
 
     if (movieTitleEdit==='') {
-
         getMovies().then((moviesdata) => {
-            console.log(moviesdata)
 
             moviesdata.forEach(({title, rating, id}) => {
                 if (editMovie === title) {
-                    // console.log('i found a match')
-                    const userMovies = {
-                        title: title,
-                        rating: editRating
-                    };
-                    const url = '/api/movies/' + id;
-                    const options = {
-                        method: 'PATCH',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(userMovies)
-                    };
-                    fetch(url, options)
+                    editStars(title, editRating, id)
                         .then(movies)
                         .then(editMovies)
                         .then(deleteMovies);
@@ -164,27 +118,12 @@ $('#editSubmit').click(function (e) {
         });
     }
 
-    if (movieTitleEdit!=='' && editRating!=="How many stars do you give this movie?"){
-
+    if (movieTitleEdit !=='' && editRating !=="How many stars do you give this movie?"){
         getMovies().then((moviesdata) => {
-            console.log(moviesdata)
 
             moviesdata.forEach(({title, rating, id}) => {
                 if (editMovie === title) {
-                    // console.log('i found a match')
-                    const userMovies = {
-                        title: movieTitleEdit,
-                        rating: editRating
-                    };
-                    const url = '/api/movies/' + id;
-                    const options = {
-                        method: 'PATCH',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(userMovies)
-                    };
-                    fetch(url, options)
+                    editTitleStars(movieTitleEdit, movieRating,  id)
                         .then(movies)
                         .then(editMovies)
                         .then(deleteMovies);
@@ -192,27 +131,12 @@ $('#editSubmit').click(function (e) {
             });
         });
     }
-    if (movieTitleEdit!=='' && editRating==="How many stars do you give this movie?"){
-
+    if (movieTitleEdit !=='' && editRating==="How many stars do you give this movie?"){
         getMovies().then((moviesdata) => {
-            console.log(moviesdata)
 
             moviesdata.forEach(({title, rating, id}) => {
                 if (editMovie === title) {
-                    // console.log('i found a match')
-                    const userMovies = {
-                        title: movieTitleEdit,
-                        rating: rating
-                    };
-                    const url = '/api/movies/' + id;
-                    const options = {
-                        method: 'PATCH',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(userMovies)
-                    };
-                    fetch(url, options)
+                    editTitle(movieTitleEdit, rating, id)
                         .then(movies)
                         .then(editMovies)
                         .then(deleteMovies);
@@ -220,6 +144,8 @@ $('#editSubmit').click(function (e) {
             });
         });
     }
+    $('#movieNameEdit').val('');
+    $('#editRating').val('How many stars do you give this movie?');
 });
 
 //Lets you delete a movie
@@ -245,7 +171,6 @@ const deleteMovies = () =>
     //gets value for movies option tag
         .then($("select#deleteMovies").change(function(){
             deleteMovieData = $(this).children("option:selected").val();
-            console.log(deleteMovieData)
         }))
         .catch((error) => {
             console.log(error);
@@ -261,19 +186,7 @@ $('#deleteSubmit').click(function (e) {
     getMovies().then((moviesdata) => {
         moviesdata.forEach(({title, rating, id}) => {
             if(deleteMovieData===title){
-                const userMovies = {
-                    title: title,
-                    rating: rating
-                };
-                const url = '/api/movies/'+id;
-                const options = {
-                    method: 'DELETE',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(userMovies)
-                };
-                fetch(url, options)
+                deleteMovie(title, rating, id)
                     .then(movies)
                     .then(editMovies)
                     .then(deleteMovies);
@@ -281,7 +194,6 @@ $('#deleteSubmit').click(function (e) {
         });
     });
 });
-
 
 
 // Loads Details of Movie Selected
@@ -296,7 +208,6 @@ $('#deleteSubmit').click(function (e) {
              if (selectMovieEdit === title) {
                  moviedetails += `<div>${title} Rating: ${rating}</div>`;
              }
-             console.log(moviedetails)
          });
          $(moviedetails).appendTo('#movieDetails')
      }).catch((error) => {

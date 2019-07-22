@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
-
     <div class="container">
         <form method="POST">
             <label for="movieName">Enter Movie Title To Add</label>
@@ -23,15 +22,15 @@
             <button id="submit" type="submit" disabled>Submit</button>
         </form>
         <br>
+
         <form>
             <label for="editMovies">Select Movie To Edit</label>
-            <select name="editMovie" id="editMovies">
-            </select>
+            <select name="editMovie" id="editMovies"></select>
             <button id="movieDetailSelect" type="submit" disabled>Select</button>
             <h3>Selected Movie Details:</h3>
-            <div id="movieDetails">
-            </div>
+            <div id="movieDetails"></div>
             <br>
+
             <label for="editRating">Select New Star Rating</label>
             <select id="editRating" name="movieRating">
                 <option class="star">How many stars do you give this movie?</option>
@@ -45,16 +44,14 @@
             <input id="movieNameEdit" type="text">
             <button id="editSubmit" type="submit" disabled>Submit</button>
         </form>
-
-
         <br>
+
         <form>
             <label for="deleteMovies">Select a Movie to Delete</label>
             <select name="deleteMovies" id="deleteMovies">
             </select>
             <button id="deleteSubmit" type="submit" disabled>Submit</button>
         </form>
-
 
         <div id="movies">
             <h3>Loading...</h3>
