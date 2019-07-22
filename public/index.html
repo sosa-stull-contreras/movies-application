@@ -27,25 +27,57 @@
         <br>
 
         <form>
-            <label for="editMovies">Select Movie To Edit</label>
+            <label for="editMovies">Select Movie for Details</label>
             <select name="editMovie" id="editMovies"></select>
-            <button id="movieDetailSelect" class="btn btn3" type="submit" disabled>Select</button>
-            <h3>Selected Movie Details:</h3>
-            <div id="movieDetails"></div>
-            <br>
+            <button id="movieDetailSelect" class="btn btn3" type="submit" data-toggle="modal" data-target="#exampleModalCenter" disabled>Select</button>
 
-            <label for="editRating">Select New Star Rating</label>
-            <select id="editRating" name="movieRating">
-                <option class="star">How many stars do you give this movie?</option>
-                <option class="star" value="1 ★">1 ★</option>
-                <option class="star" value="2 ★★">2 ★★</option>
-                <option class="star" value="3 ★★★">3 ★★★</option>
-                <option class="star" value="4 ★★★★">4 ★★★★</option>
-                <option class="star" value="5 ★★★★★">5 ★★★★★</option>
-            </select>
-            <label for="movieNameEdit">Edit Movie Title</label>
-            <input id="movieNameEdit" type="text">
-            <button id="editSubmit" class="btn btn3" type="submit" disabled>Submit</button>
+
+
+                <!-- Button trigger modal -->
+<!--                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">-->
+<!--                    Launch demo modal-->
+<!--                </button>-->
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Movie Details</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <h3 class="fancy-header">Selected Movie Details:</h3>
+                                <div id="movieDetails"></div>
+                                <br>
+
+                                <label for="editRating">Select New Star Rating</label>
+                                <select id="editRating" name="movieRating">
+                                    <option class="star">How many stars do you give this movie?</option>
+                                    <option class="star" value="1 ★">1 ★</option>
+                                    <option class="star" value="2 ★★">2 ★★</option>
+                                    <option class="star" value="3 ★★★">3 ★★★</option>
+                                    <option class="star" value="4 ★★★★">4 ★★★★</option>
+                                    <option class="star" value="5 ★★★★★">5 ★★★★★</option>
+                                </select>
+                                <br>
+                                <br>
+                                <label for="movieNameEdit">Edit Movie Title</label>
+                                <input id="movieNameEdit" type="text">
+<!--                                <button id="editSubmit" class="btn btn3" type="submit" disabled>Submit</button>-->
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn3" data-dismiss="modal">Close</button>
+<!--                                <button type="button" class="btn btn-primary">Save changes</button>-->
+                                <button id="editSubmit" class="btn btn3" type="submit" disabled>Submit Changes</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
         </form>
         <br>
 
@@ -63,31 +95,6 @@
     </div>
 
 
-<!--    &lt;!&ndash; Button trigger modal &ndash;&gt;-->
-<!--    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">-->
-<!--        Launch demo modal-->
-<!--    </button>-->
-
-<!--    &lt;!&ndash; Modal &ndash;&gt;-->
-<!--    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">-->
-<!--        <div class="modal-dialog modal-dialog-centered" role="document">-->
-<!--            <div class="modal-content">-->
-<!--                <div class="modal-header">-->
-<!--                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>-->
-<!--                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
-<!--                        <span aria-hidden="true">&times;</span>-->
-<!--                    </button>-->
-<!--                </div>-->
-<!--                <div class="modal-body">-->
-<!--                    ...-->
-<!--                </div>-->
-<!--                <div class="modal-footer">-->
-<!--                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
-<!--                    <button type="button" class="btn btn-primary">Save changes</button>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
 
 
 

@@ -156,6 +156,7 @@ $('#editSubmit').click(function (e) {
 //Lets you delete a movie
 const deleteMovies = () =>
     getMovies().then((movies) => {
+
         const sortArray =
             movies.sort(function (a, b) {
                 if (a.title < b.title){
@@ -211,7 +212,7 @@ $('#deleteSubmit').click(function (e) {
          let moviedetails = " ";
          movies.forEach(({title, rating, id}) => {
              if (selectMovieEdit === title) {
-                 moviedetails += `<div>${title} Rating: ${rating}</div>`;
+                 moviedetails += `<div> <h3>${title}</h3> <br> <h3> Rating:</h3> ${rating}</div>`;
              }
          });
          $(moviedetails).appendTo('#movieDetails')
