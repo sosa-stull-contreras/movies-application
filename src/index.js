@@ -11,11 +11,19 @@ let editMovie;
 let movieRating;
 let editRating;
 let deleteMovieData;
-
+let poster;
 
 //Capitalize Letter
 const capitalizeFirstLetter = (string) => string.charAt(0).toUpperCase() + string.slice(1);
 
+const testing = (title) => {
+    return fetch(`http://www.omdbapi.com/?s=${title}&apikey=41424bce`)
+        .then(response => response.json())
+        .then(data => {
+            poster = data.Search[0].Poster;
+            console.log(poster)
+        })
+};
 
 //Function populates movie list
 const movies = () =>
@@ -34,7 +42,8 @@ const movies = () =>
         let moviePost = "";
   moviePost += '<h2>Here are the movies!</h2>';
   sortArray.forEach(({title, rating, id}) => {
-    moviePost +=`<div>${title} - Rating: ${rating}</div>`;
+      testing(title);
+      moviePost +=`<div><img src=" ">${title} - Rating: ${rating}</div>`;
   });
   $(moviePost).appendTo('#movies')
 }).catch((error) => {
