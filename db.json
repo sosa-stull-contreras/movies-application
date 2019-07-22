@@ -2,23 +2,43 @@
   "movies": [
     {
       "title": "Casablanca",
-      "rating": "3",
+      "rating": "4 ★★★★",
       "id": 1
     },
     {
-      "title": "Star Wars: A New Hope",
-      "rating": "2",
-      "id": 2
+      "title": "American Psycho",
+      "rating": "3 ★★★",
+      "id": 4
     },
     {
-      "title": "matrix",
-      "rating": "2",
+      "title": "The Matrix",
+      "rating": "4 ★★★★",
       "id": 5
     },
     {
-      "title": "",
-      "rating": "1",
+      "title": "Star is Born",
+      "rating": "3 ★★★",
       "id": 6
+    },
+    {
+      "title": "Children of Men",
+      "rating": "5 ★★★★★",
+      "id": 7
+    },
+    {
+      "title": "Interstellar",
+      "rating": "5 ★★★★★",
+      "id": 8
+    },
+    {
+      "title": "Kill Bill Vol.I",
+      "rating": "5 ★★★★★",
+      "id": 9
+    },
+    {
+      "title": "Beetlejuice",
+      "rating": "4 ★★★★",
+      "id": 10
     }
   ]
 }

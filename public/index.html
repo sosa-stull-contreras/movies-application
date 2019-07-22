@@ -9,36 +9,44 @@
 
     <div class="container">
         <form method="POST">
-            <label for="movieName">Enter Movie Title</label>
+            <label for="movieName">Enter Movie Title To Add</label>
             <input id="movieName" type="text">
             <label for="movieRating">Enter Rating</label>
             <select id="movieRating" name="movieRating">
                 <option class="star">How many stars do you give this movie?</option>
-                <option class="star" value="1">One Star</option>
-                <option class="star" value="2">Two Star</option>
-                <option class="star" value="3">Three Star</option>
-                <option class="star" value="4">Four Star</option>
-                <option class="star" value="5">Five Star</option>
+                <option class="star" value="1 ★">1 ★</option>
+                <option class="star" value="2 ★★">2 ★★</option>
+                <option class="star" value="3 ★★★">3 ★★★</option>
+                <option class="star" value="4 ★★★★">4 ★★★★</option>
+                <option class="star" value="5 ★★★★★">5 ★★★★★</option>
             </select>
             <button id="submit" type="submit" disabled>Submit</button>
         </form>
         <br>
         <form>
-            <label for="editMovies">Select a Movie to Edit</label>
+            <label for="editMovies">Select Movie To Edit</label>
             <select name="editMovie" id="editMovies">
             </select>
-
-            <label for="editRating">Select new Star Rating</label>
+            <button id="movieDetailSelect" type="submit" disabled>Select</button>
+            <h3>Selected Movie Details:</h3>
+            <div id="movieDetails">
+            </div>
+            <br>
+            <label for="editRating">Select New Star Rating</label>
             <select id="editRating" name="movieRating">
                 <option class="star">How many stars do you give this movie?</option>
-                <option class="star" value="1">One Star</option>
-                <option class="star" value="2">Two Star</option>
-                <option class="star" value="3">Three Star</option>
-                <option class="star" value="4">Four Star</option>
-                <option class="star" value="5">Five Star</option>
+                <option class="star" value="1 ★">1 ★</option>
+                <option class="star" value="2 ★★">2 ★★</option>
+                <option class="star" value="3 ★★★">3 ★★★</option>
+                <option class="star" value="4 ★★★★">4 ★★★★</option>
+                <option class="star" value="5 ★★★★★">5 ★★★★★</option>
             </select>
+            <label for="movieNameEdit">Edit Movie Title</label>
+            <input id="movieNameEdit" type="text">
             <button id="editSubmit" type="submit" disabled>Submit</button>
         </form>
+
+
         <br>
         <form>
             <label for="deleteMovies">Select a Movie to Delete</label>
