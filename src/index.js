@@ -128,7 +128,7 @@ $('#editSubmit').click(function (e) {
 
             moviesdata.forEach(({title, rating, id}) => {
                 if (editMovie === title) {
-                    editTitleStars(movieTitleEdit, movieRating,  id)
+                    editTitleStars(movieTitleEdit, editRating, id)
                         .then(movies)
                         .then(editMovies)
                         .then(deleteMovies);
