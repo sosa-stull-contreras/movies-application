@@ -40,7 +40,7 @@ const movies = () =>
                     return 0;}
             });
         let moviePost = "";
-  moviePost += '<h2>Here are the movies!</h2>';
+  moviePost += '<h1>Browse Movies!</h1>';
   sortArray.forEach(({title, rating, id}) => {
       testing(title);
       moviePost +=`<div><img src=" ">${title} - Rating: ${rating}</div>`;

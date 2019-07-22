@@ -9,11 +9,15 @@
 
 </head>
 <body>
+<h1 id="main-header">THE MOVIE SPOT</h1>
     <div class="container">
+        <div id="divider1">
         <form method="POST">
-            <label for="movieName">Enter Movie Title To Add</label>
+            <label for="movieName" class="divider-heading">Enter Movie Title To Add</label>
             <input id="movieName" type="text">
-            <label for="movieRating">Enter Rating</label>
+            <br>
+            <label for="movieRating" class="divider-heading">Enter Rating</label>
+            <br>
             <select id="movieRating" name="movieRating">
                 <option class="star">How many stars do you give this movie?</option>
                 <option class="star" value="1 ★">1 ★</option>
@@ -24,13 +28,15 @@
             </select>
             <button id="submit" class="btn btn3" type="submit" disabled>Submit</button>
         </form>
+        </div>
         <br>
-
         <form>
-            <label for="editMovies">Select Movie for Details</label>
-            <select name="editMovie" id="editMovies"></select>
-            <button id="movieDetailSelect" class="btn btn3" type="submit" data-toggle="modal" data-target="#exampleModalCenter" disabled>Select</button>
+            <div id="divider2">
 
+            <label for="editMovies" class="divider-heading">Select Movie for Details</label><br>
+            <select name="editMovie" id="editMovies"></select><br>
+            <button id="movieDetailSelect" class="btn btn3" type="submit" data-toggle="modal" data-target="#exampleModalCenter" disabled>Select</button>
+            </div>
 
 
                 <!-- Button trigger modal -->
@@ -71,7 +77,7 @@
                             <div class="modal-footer">
                                 <button type="submit" class="btn btn3" data-dismiss="modal">Close</button>
 <!--                                <button type="button" class="btn btn-primary">Save changes</button>-->
-                                <button id="editSubmit" class="btn btn3" type="submit" disabled>Submit Changes</button>
+                                <button  class="btn btn3" type="submit" disabled>Submit Changes</button>
 
                             </div>
                         </div>
@@ -80,14 +86,16 @@
 
         </form>
         <br>
-
+        <div id="divider3">
         <form>
-            <label for="deleteMovies">Select a Movie to Delete</label>
+            <label for="deleteMovies" class="divider-heading">Select a Movie to Delete</label>
+            <br>
             <select name="deleteMovies" id="deleteMovies">
             </select>
+            <br>
             <button id="deleteSubmit" class="btn btn4" type="submit" disabled>Submit</button>
         </form>
-
+        </div>
         <div id="movies" class="h-scroll">
 <!--            <h3>Loading...</h3>-->
             <img id="popcornRunning" src ="pictures/pop.gif" >

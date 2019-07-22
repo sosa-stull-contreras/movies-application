@@ -15,7 +15,7 @@
 }
 
 .btn{
-    border: 1px solid #ED6973;
+    border: 1px solid #F1BE61;
     background: none;
     padding: 10px 20px;
     font-size: 20px;
@@ -24,6 +24,7 @@
     transition: 0.8s;
     position: relative;
     overflow: hidden;
+    z-index:20;
 }
 
 .btn3,.btn4{
@@ -31,7 +32,7 @@
 }
 
 .btn3:hover,.btn4:hover{
-    color: #ED6973;
+    color: #F1BE61;
 }
 .btn::before{
     content: "";
@@ -39,7 +40,7 @@
     left: 0;
     width: 100%;
     height: 0%;
-    background: #ED6973;
+    background: #F1BE61;
     z-index: -1;
     transition: 0.8s;
 }
@@ -66,10 +67,11 @@
  }
 
  #movies{
+     position:relative;
      align-content:center;
      height:300px;
      width:400px;
-     margin:auto;
+     margin:320px 350px;
  }
 
  #popcornRunning{
@@ -79,4 +81,44 @@
 
  .fancy-header{
      color:#ED6973;
+ }
+
+
+ #divider1{
+     position:relative;
+     margin-top:50px;
+     background-color:#ED6973;
+     width:350px;
+     height:300px;
+     float:left;
+     text-align:center;
+ }
+
+
+ #divider2{
+     margin-top:25px;
+     margin-left:10px;
+     background-color:#ED6973;
+     width:350px;
+     height:300px;
+     float:left;
+ }
+
+ #divider3{
+     /*margin-top:5px;*/
+     margin-left:10px;
+     background-color:#ED6973;
+     width:350px;
+     height:300px;
+     float:left;
+ }
+
+ #main-header{
+     text-align:center;
+
+ }
+
+ .divider-heading{
+     font-size:25px;
+     color:white;
  }
