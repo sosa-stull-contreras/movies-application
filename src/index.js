@@ -219,11 +219,3 @@ $('#deleteSubmit').click(function (e) {
          console.log(error);
      })
  });
-
- //modal
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.modal');
-    var instances = M.Modal.init(elems, options);
-});
-var instance = M.Modal.getInstance(elem);
-instance.open();
