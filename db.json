@@ -2,99 +2,183 @@
   "movies": [
     {
       "title": "Casablanca",
-      "rating": "&#11088;&#11088;&#11088;&#11088;",
+      "rating": "⭐⭐⭐⭐⭐",
       "poster": "pictures/casablanca.jpg",
       "id": 1
     },
     {
       "title": "American Psycho",
-      "rating": "&#11088;&#11088;&#11088;",
-      "id": 4
+      "rating": "⭐⭐⭐⭐",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZTM2ZGJmNjQtN2UyOS00NjcxLWFjMDktMDE2NzMyNTZlZTBiXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
+      "id": 2
     },
     {
       "title": "The Matrix",
-      "rating": "⭐⭐⭐⭐⭐",
-      "id": 5
+      "rating": "⭐⭐⭐⭐",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
+      "id": 3
     },
     {
       "title": "A Star is Born",
-      "rating": "⭐⭐⭐⭐",
-      "id": 6
+      "rating": "⭐⭐⭐",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNmE5ZmE3OGItNTdlNC00YmMxLWEzNjctYzAwOGQ5ODg0OTI0XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
+      "id": 4
     },
     {
       "title": "Children of Men",
-      "rating": "&#11088;&#11088;&#11088;&#11088;&#11088;",
-      "id": 7
+      "rating": "⭐⭐⭐⭐",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTQ5NTI2NTI4NF5BMl5BanBnXkFtZTcwNjk2NDA2OQ@@._V1_SX300.jpg",
+      "id": 5
     },
     {
       "title": "Interstellar",
-      "rating": "&#11088;&#11088;&#11088;&#11088;&#11088;",
-      "id": 8
+      "rating": "⭐⭐⭐⭐⭐",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
+      "id": 6
     },
     {
       "title": "Kill Bill Vol.1",
-      "rating": "&#11088;&#11088;&#11088;&#11088;&#11088;",
-      "id": 9
+      "rating": "⭐⭐⭐⭐",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNzM3NDFhYTAtYmU5Mi00NGRmLTljYjgtMDkyODQ4MjNkMGY2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
+      "id": 7
     },
     {
       "title": "Beetlejuice",
-      "rating": "&#11088;&#11088;&#11088;&#11088;",
-      "id": 10
+      "rating": "⭐⭐⭐⭐",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZDdmNjBlYTctNWU0MC00ODQxLWEzNDQtZGY1NmRhYjNmNDczXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+      "id": 8
     },
     {
       "title": "The Hobbit",
-      "rating": "&#11088;&#11088;&#11088;&#11088;",
-      "id": 11
+      "rating": "⭐⭐⭐⭐",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTcwNTE4MTUxMl5BMl5BanBnXkFtZTcwMDIyODM4OA@@._V1_SX300.jpg",
+      "id": 9
     },
     {
       "title": "Inglourious Basterds",
-      "rating": "&#11088;&#11088;&#11088;&#11088;",
-      "id": 12
+      "rating": "⭐⭐⭐⭐",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOTJiNDEzOWYtMTVjOC00ZjlmLWE0NGMtZmE1OWVmZDQ2OWJhXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg",
+      "id": 10
     },
     {
       "title": "Spirited Away",
-      "rating": "&#11088;&#11088;&#11088;&#11088;&#11088;",
-      "id": 13
+      "rating": "⭐⭐⭐⭐⭐",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNmU5OTQ0OWQtOTY0OS00Yjg4LWE1NDYtNDRhYWMxYWY4OTMwXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
+      "id": 11
     },
     {
       "title": "28 Days Later",
-      "rating": "⭐⭐⭐⭐⭐",
-      "id": 14
+      "rating": "⭐⭐⭐⭐",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYTFkM2ViMmQtZmI5NS00MjQ2LWEyN2EtMTI1ZmNlZDU3MTZjXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
+      "id": 12
     },
     {
       "title": "Saving Private Ryan",
-      "rating": "⭐⭐⭐⭐⭐",
+      "rating": "⭐⭐⭐⭐",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZjhkMDM4MWItZTVjOC00ZDRhLThmYTAtM2I5NzBmNmNlMzI1XkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_SX300.jpg",
+      "id": 13
+    },
+    {
+      "title": "2001: A space odyssey",
+      "rating": "⭐⭐⭐⭐",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMmNlYzRiNDctZWNhMi00MzI4LThkZTctMTUzMmZkMmFmNThmXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
       "id": 15
     },
     {
-      "title": "Big",
-      "rating": "⭐⭐⭐",
-      "id": 16
-    },
-    {
-      "title": "2001: A Space Odyssey",
-      "rating": "⭐⭐⭐⭐⭐",
-      "id": 17
-    },
-    {
       "title": "Amelie",
-      "rating": "⭐⭐⭐⭐⭐",
-      "id": 18
+      "rating": "⭐⭐⭐⭐",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNDg4NjM1YjMtYmNhZC00MjM0LWFiZmYtNGY1YjA3MzZmODc5XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg",
+      "id": 16
     },
     {
       "title": "Inception",
       "rating": "⭐⭐⭐⭐",
-      "id": 19
+      "poster": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
+      "id": 17
     },
     {
       "title": "Django Unchained",
       "rating": "⭐⭐⭐⭐",
-      "id": 20
+      "poster": "https://m.media-amazon.com/images/M/MV5BMjIyNTQ5NjQ1OV5BMl5BanBnXkFtZTcwODg1MDU4OA@@._V1_SX300.jpg",
+      "id": 18
     },
     {
       "title": "Fried Green Tomatoes",
-      "rating": "⭐⭐⭐⭐⭐",
+      "rating": "⭐⭐⭐⭐",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOWQ1ZWE0MTQtMmEwOS00YjA3LTgyZTAtNjY5ODEyZTJjNDI2XkEyXkFqcGdeQXVyNjE5MjUyOTM@._V1_SX300.jpg",
+      "id": 19
+    },
+    {
+      "title": "Cast Away",
+      "rating": "⭐⭐⭐⭐",
+      "poster": "https://m.media-amazon.com/images/M/MV5BN2Y5ZTU4YjctMDRmMC00MTg4LWE1M2MtMjk4MzVmOTE4YjkzXkEyXkFqcGdeQXVyNTc1NTQxODI@._V1_SX300.jpg",
+      "id": 20
+    },
+    {
+      "title": "Jawbreaker",
+      "rating": "⭐⭐⭐⭐",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOTcwZWZkZWUtZjRhMi00ZDNhLTljOWItNjBkNzIwYTA0YWQyL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
       "id": 21
+    },
+    {
+      "title": "John Wick",
+      "rating": "⭐⭐⭐⭐",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTU2NjA1ODgzMF5BMl5BanBnXkFtZTgwMTM2MTI4MjE@._V1_SX300.jpg",
+      "id": 22
+    },
+    {
+      "title": "Forrest gump",
+      "rating": "⭐⭐⭐⭐⭐",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+      "id": 23
+    },
+    {
+      "title": "Patch Adams",
+      "rating": "⭐⭐⭐⭐⭐",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNzM4Y2FlNzYtZmY5Yy00NzU4LTk1ODItY2NjYWYzYzUyZGM3L2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+      "id": 24
+    },
+    {
+      "title": "Mrs.Doubtfire",
+      "rating": "⭐⭐⭐⭐⭐",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMjExMDUzODE1N15BMl5BanBnXkFtZTgwNTU5NTYxMTE@._V1_SX300.jpg",
+      "id": 25
+    },
+    {
+      "title": "Beaches",
+      "rating": "⭐⭐⭐⭐⭐",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMjJjODRiNDMtNzRlZi00M2E3LWIzZDItYmU1NGQyMDFmYTc2XkEyXkFqcGdeQXVyMTA0MjU0Ng@@._V1_SX300.jpg",
+      "id": 26
+    },
+    {
+      "title": "Weird Science",
+      "rating": "⭐⭐⭐⭐⭐",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNzg1N2JlYWYtMmU3Zi00MzhiLWJiN2EtNzJkZjI1Njc1ZmFlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+      "id": 27
+    },
+    {
+      "title": "Pretty in Pink",
+      "rating": "⭐⭐⭐⭐⭐",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOGE3ZmVjMzMtMDcxNi00YjM5LTg3NjMtZWMxYjlhNTk2MmZjXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+      "id": 28
+    },
+    {
+      "title": "Sixteen Candles",
+      "rating": "⭐⭐⭐⭐⭐",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTgzNTkxMTkxMl5BMl5BanBnXkFtZTgwMjE3NjkzMTE@._V1_SX300.jpg",
+      "id": 29
+    },
+    {
+      "title": "A clockwork orange",
+      "rating": "⭐⭐⭐⭐⭐",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTY3MjM1Mzc4N15BMl5BanBnXkFtZTgwODM0NzAxMDE@._V1_SX300.jpg",
+      "id": 30
+    },
+    {
+      "title": "The help",
+      "rating": "⭐⭐⭐⭐⭐",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTM5OTMyMjIxOV5BMl5BanBnXkFtZTcwNzU4MjIwNQ@@._V1_SX300.jpg",
+      "id": 31
     }
   ]
 }

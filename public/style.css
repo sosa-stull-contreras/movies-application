@@ -70,19 +70,22 @@
      /*position:relative;*/
      /*align-content:center;*/
      height:500px;
-     width:400px;
-     margin:320px 350px;
-     font-weight:bold;
+     width:100%;
+     margin-top:320px;
      text-align:justify;
+     background-color:rgba(204,204,204,0.75);
  }
 
  #popcornRunning{
      height:300px;
      width:300px;
+     margin-left:37%;
  }
 
  .fancy-header{
      color:#ED6973;
+     font-family: 'Monoton', cursive;
+
 
  }
 
@@ -133,10 +136,11 @@
      color:white;
 
 
+
  }
 
  .dividerPics{
-     width:200px;
+     width:175px;
      height:125px;
  }
 
@@ -167,4 +171,12 @@
  }
  #movieDetailSelect{
      margin-top:30px;
+ }
+
+ .posterSize{
+     width:175px;
+     height:225px;
+ }
+ #browse{
+     text-align:center;
  }

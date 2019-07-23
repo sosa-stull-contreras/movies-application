@@ -31,9 +31,9 @@ const movies = () =>
                     return 0;}
             });
         let moviePost = "";
-  moviePost += '<h1>Browse Movies!</h1> <hr>';
+  moviePost += ' ';
   sortArray.forEach(({title, rating, poster, id}) => {
-      moviePost +=`<div><img src="${poster}" alt=""> <h6>${title}</h6> - Rating: ${rating}</div>`;
+      moviePost +=`<div class="col-4"><img src="${poster}" alt=""> <h6>${title}</h6> - Rating: ${rating}</div>`;
   });
   $(moviePost).appendTo('#movies')
 }).catch((error) => {
@@ -208,9 +208,9 @@ $('#deleteSubmit').click(function (e) {
      getMovies().then((movies) => {
          $('#movieDetails').html(" ");
          let moviedetails = " ";
-         movies.forEach(({title, rating, id}) => {
+         movies.forEach(({title, rating,poster, id}) => {
              if (selectMovieEdit === title) {
-                 moviedetails += `<div> <h3>${title}</h3> <br> <h3> Rating:</h3> ${rating}</div>`;
+                 moviedetails += `<div> <h4>${title}</h4><img class="posterSize" src="${poster}"><br> ${rating}</div>`;
              }
          });
          $(moviedetails).appendTo('#movieDetails')
