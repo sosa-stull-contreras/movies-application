@@ -1,5 +1,4 @@
  body {
-    /*height: 100%;*/
     background-image:url("pictures/popcornimage.jpg");
     background-size:cover;
     background-repeat:no-repeat;
@@ -11,7 +10,6 @@
 .container {
     position: relative;
     text-align: center;
-    /*margin-top: 360px;*/
 }
 
 .btn{
@@ -39,7 +37,7 @@
     position: absolute;
     left: 0;
     width: 100%;
-    height: 0%;
+    height: 0;
     background: #F1BE61;
     z-index: -1;
     transition: 0.8s;
@@ -57,9 +55,8 @@
 }
 
 .btn3:hover::before,.btn4:hover::before{
-    height: 0%;
+    height: 0;
 }
-
 
  .h-scroll {
      height: 130vh; /* %-height of the viewport */
@@ -67,8 +64,6 @@
  }
 
  #movies{
-     /*position:relative;*/
-     /*align-content:center;*/
      height:500px;
      width:100%;
      margin-top: 20px;
@@ -85,10 +80,7 @@
  .fancy-header{
      color:#ED6973;
      font-family: 'Monoton', cursive;
-
-
  }
-
 
  #divider1{
      position:relative;
@@ -100,9 +92,7 @@
      text-align:center;
      opacity:.95;
      border-radius:10%;
-
  }
-
 
  #divider2{
      margin-top:25px;
@@ -113,8 +103,6 @@
      float:left;
      opacity:.95;
      border-radius:10%;
-
-
  }
 
  #divider3{
@@ -126,17 +114,11 @@
      float:left;
      opacity:.95;
      border-radius:10%;
-
-
  }
-
 
  .divider-heading{
      font-size:25px;
      color:white;
-
-
-
  }
 
  .dividerPics{
@@ -152,11 +134,9 @@
      width:90%;
  }
 
-
  #deleteMovies{
      width:90%;
     margin-top:5px;
-
  }
  #jumbotron{
      background-color:#F1BE61;
@@ -167,7 +147,6 @@
  #jumbotron-heading{
      font-size:50px;
      font-family: 'Monoton', cursive;
-
  }
  #movieDetailSelect{
      margin-top:30px;

@@ -169,13 +169,13 @@
       "id": 29
     },
     {
-      "title": "A clockwork orange",
+      "title": "A Clockwork Orange",
       "rating": "⭐⭐⭐⭐⭐",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTY3MjM1Mzc4N15BMl5BanBnXkFtZTgwODM0NzAxMDE@._V1_SX300.jpg",
       "id": 30
     },
     {
-      "title": "The help",
+      "title": "The Help",
       "rating": "⭐⭐⭐⭐⭐",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTM5OTMyMjIxOV5BMl5BanBnXkFtZTcwNzU4MjIwNQ@@._V1_SX300.jpg",
       "id": 31
@@ -191,6 +191,30 @@
       "rating": "⭐⭐⭐⭐",
       "poster": "https://m.media-amazon.com/images/M/MV5BZWFlYmY2MGEtZjVkYS00YzU4LTg0YjQtYzY1ZGE3NTA5NGQxXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
       "id": 33
+    },
+    {
+      "title": "Lion King",
+      "rating": "⭐⭐⭐⭐",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYTYxNGMyZTYtMjE3MS00MzNjLWFjNmYtMDk3N2FmM2JiM2M1XkEyXkFqcGdeQXVyNjY5NDU4NzI@._V1_SX300.jpg",
+      "id": 34
+    },
+    {
+      "title": "Space Jam",
+      "rating": "⭐⭐⭐⭐",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMDgyZTI2YmYtZmI4ZC00MzE0LWIxZWYtMWRlZWYxNjliNTJjXkEyXkFqcGdeQXVyNjY5NDU4NzI@._V1_SX300.jpg",
+      "id": 35
+    },
+    {
+      "title": "Little Mermaid",
+      "rating": "⭐⭐⭐",
+      "poster": "https://m.media-amazon.com/images/M/MV5BN2JlZTBhYTEtZDE3OC00NTA3LTk5NTQtNjg5M2RjODllM2M0XkEyXkFqcGdeQXVyNjk1Njg5NTA@._V1_SX300.jpg",
+      "id": 36
+    },
+    {
+      "title": "Batman",
+      "rating": "⭐⭐⭐⭐",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZmUwNGU2ZmItMmRiNC00MjhlLTg5YWUtODMyNzkxODYzMmZlXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg",
+      "id": 37
     }
   ]
 }

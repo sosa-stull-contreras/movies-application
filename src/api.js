@@ -91,4 +91,3 @@ module.exports = {
     return fetch(url, options)
   }
 };
-

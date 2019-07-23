@@ -1,9 +1,3 @@
-/**
- * es6 modules and imports
- */
-/**
- * require style imports
- */
 const {getMovies, addMovie, editStars, editTitleStars, editTitle, deleteMovie} = require('./api.js');
 const $ = require('jquery');
 
@@ -15,6 +9,19 @@ let deleteMovieData;
 //Capitalize Letter
 const capitalizeFirstLetter = (string) => string.charAt(0).toUpperCase() + string.slice(1);
 
+
+//Function gets value from star ratings
+$("select#movieRating").change(function(){
+    movieRating = $(this).children("option:selected").val();
+    $("#submit").removeAttr("disabled");
+});
+
+//Function gets value for edit star ratings
+$("select#editRating").change(function(){
+    editRating = $(this).children("option:selected").val();
+});
+
+//Search bar function
 $('#searchMovies').keyup(searchMovies);
 function searchMovies() {
     const search = $('#searchMovies').val();
@@ -56,19 +63,6 @@ const movies = () =>
   console.log(error);
 });
 movies();
-
-
-//Function gets value from star ratings
-$("select#movieRating").change(function(){
-  movieRating = $(this).children("option:selected").val();
-  $("#submit").removeAttr("disabled");
-});
-
-
-//Function gets value for edit star ratings
-$("select#editRating").change(function(){
-  editRating = $(this).children("option:selected").val();
-});
 
 
 //Posts data to the json, updates movies
@@ -136,7 +130,6 @@ $('#editSubmit').click(function (e) {
             });
         });
     }
-
     if (movieTitleEdit !=='' && editRating !=="How many stars do you give this movie?"){
         getMovies().then((moviesdata) => {
 
@@ -170,7 +163,6 @@ $('#editSubmit').click(function (e) {
 //Lets you delete a movie
 const deleteMovies = () =>
     getMovies().then((movies) => {
-
         const sortArray =
             movies.sort(function (a, b) {
                 if (a.title < b.title){
@@ -234,5 +226,3 @@ $('#deleteSubmit').click(function (e) {
          console.log(error);
      })
  });
-
-
