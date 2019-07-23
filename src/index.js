@@ -40,10 +40,10 @@ const movies = () =>
                     return 0;}
             });
         let moviePost = "";
-  moviePost += '<h1>Browse Movies!</h1>';
+  moviePost += '<h1>Browse Movies!</h1> <hr>';
   sortArray.forEach(({title, rating, id}) => {
       testing(title);
-      moviePost +=`<div><img src=" ">${title} - Rating: ${rating}</div>`;
+      moviePost +=`<div><img src=" "> <h6>${title}</h6> - Rating: ${rating}</div>`;
   });
   $(moviePost).appendTo('#movies')
 }).catch((error) => {
@@ -229,3 +229,5 @@ $('#deleteSubmit').click(function (e) {
          console.log(error);
      })
  });
+
+

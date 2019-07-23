@@ -12,7 +12,7 @@
     },
     {
       "title": "The Matrix",
-      "rating": "&#11088;&#11088;&#11088;&#11088;",
+      "rating": "⭐⭐⭐⭐⭐",
       "id": 5
     },
     {
@@ -79,6 +79,21 @@
       "title": "Amelie",
       "rating": "⭐⭐⭐⭐⭐",
       "id": 18
+    },
+    {
+      "title": "Inception",
+      "rating": "⭐⭐⭐⭐",
+      "id": 19
+    },
+    {
+      "title": "Django Unchained",
+      "rating": "⭐⭐⭐⭐",
+      "id": 20
+    },
+    {
+      "title": "Fried Green Tomatoes",
+      "rating": "⭐⭐⭐⭐⭐",
+      "id": 21
     }
   ]
 }
