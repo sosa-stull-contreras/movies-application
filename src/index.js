@@ -17,8 +17,8 @@ const capitalizeFirstLetter = (string) => string.charAt(0).toUpperCase() + strin
 
 
 //Function populates movie list
-const movies = () =>{
-    return getMovies().then((movies) => {
+const movies = () =>
+     getMovies().then((movies) => {
   $('#movies').html ("");
 // function that sorts the array alphabetically
             const sortArray =
@@ -38,7 +38,7 @@ const movies = () =>{
   $(moviePost).appendTo('#movies')
 }).catch((error) => {
   console.log(error);
-})};
+});
 movies();
 
 
@@ -59,7 +59,6 @@ $("select#editRating").change(function(){
 $('#submit').click(function (e) {
   e.preventDefault();
   let movieTitle = $('#movieName').val();
-  capitalizeFirstLetter(movieTitle);
   if(movieTitle !=='' && movieRating !== 'How many stars do you give this movie?') {
     addMovie(movieTitle, movieRating)
         .then(movies)
@@ -72,8 +71,8 @@ $('#submit').click(function (e) {
 
 
 //Edit the star rating for movies
-const editMovies = () =>{
-    return getMovies().then((movies) => {
+const editMovies = () =>
+    getMovies().then((movies) => {
         const sortArray =
             movies.sort(function (a, b) {
                 if (a.title < b.title){
@@ -98,7 +97,7 @@ const editMovies = () =>{
         }))
         .catch((error) => {
       console.log(error);
-    })};
+    });
 editMovies();
 
 
@@ -153,8 +152,8 @@ $('#editSubmit').click(function (e) {
 });
 
 //Lets you delete a movie
-const deleteMovies = () =>{
-    return getMovies().then((movies) => {
+const deleteMovies = () =>
+    getMovies().then((movies) => {
 
         const sortArray =
             movies.sort(function (a, b) {
@@ -179,7 +178,7 @@ const deleteMovies = () =>{
         }))
         .catch((error) => {
             console.log(error);
-        })};
+        });
 deleteMovies();
 
 

@@ -6,25 +6,24 @@ module.exports = {
 
   addMovie: (movieTitle, movieRating) => {
     let poster;
-    fetch(`http://www.omdbapi.com/?s=${movieTitle}&r=json&apikey=41424bce`)
+    return fetch(`http://www.omdbapi.com/?s=${movieTitle}&r=json&apikey=41424bce`)
           .then(response => response.json())
           .then(data => {
             poster = data.Search[0].Poster;
-            // console.log(poster)
-      let userMovie = {
-        title: movieTitle,
-        rating: movieRating,
-        poster: poster
-      };
-      const url = '/api/movies';
-      const options = {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(userMovie)
-      };
-      return fetch(url, options)
+            let userMovie = {
+              title: movieTitle,
+              rating: movieRating,
+              poster: poster
+            };
+            const url = '/api/movies';
+            const options = {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(userMovie)
+            };
+            fetch(url, options)
           });
   },
 
