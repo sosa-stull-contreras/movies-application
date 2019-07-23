@@ -2,63 +2,83 @@
   "movies": [
     {
       "title": "Casablanca",
-      "rating": "4 ★★★★",
+      "rating": "&#11088;&#11088;&#11088;&#11088;",
       "id": 1
     },
     {
       "title": "American Psycho",
-      "rating": "3 ★★★",
+      "rating": "&#11088;&#11088;&#11088;",
       "id": 4
     },
     {
       "title": "The Matrix",
-      "rating": "4 ★★★★",
+      "rating": "&#11088;&#11088;&#11088;&#11088;",
       "id": 5
     },
     {
-      "title": "Star is Born",
-      "rating": "3 ★★★",
+      "title": "A Star is Born",
+      "rating": "⭐⭐⭐⭐",
       "id": 6
     },
     {
       "title": "Children of Men",
-      "rating": "3 ★★★",
+      "rating": "&#11088;&#11088;&#11088;&#11088;&#11088;",
       "id": 7
     },
     {
       "title": "Interstellar",
-      "rating": "5 ★★★★★",
+      "rating": "&#11088;&#11088;&#11088;&#11088;&#11088;",
       "id": 8
     },
     {
       "title": "Kill Bill Vol.1",
-      "rating": "5 ★★★★★",
+      "rating": "&#11088;&#11088;&#11088;&#11088;&#11088;",
       "id": 9
     },
     {
       "title": "Beetlejuice",
-      "rating": "4 ★★★★",
+      "rating": "&#11088;&#11088;&#11088;&#11088;",
       "id": 10
     },
     {
       "title": "The Hobbit",
-      "rating": "4 ★★★★",
+      "rating": "&#11088;&#11088;&#11088;&#11088;",
       "id": 11
     },
     {
       "title": "Inglourious Basterds",
-      "rating": "4 ★★★★",
+      "rating": "&#11088;&#11088;&#11088;&#11088;",
       "id": 12
     },
     {
       "title": "Spirited Away",
-      "rating": "5 ★★★★★",
+      "rating": "&#11088;&#11088;&#11088;&#11088;&#11088;",
       "id": 13
     },
     {
       "title": "28 Days Later",
-      "rating": "5 ★★★★★",
+      "rating": "⭐⭐⭐⭐⭐",
       "id": 14
+    },
+    {
+      "title": "Saving Private Ryan",
+      "rating": "⭐⭐⭐⭐⭐",
+      "id": 15
+    },
+    {
+      "title": "Big",
+      "rating": "⭐⭐⭐",
+      "id": 16
+    },
+    {
+      "title": "2001: A Space Odyssey",
+      "rating": "⭐⭐⭐⭐⭐",
+      "id": 17
+    },
+    {
+      "title": "Amelie",
+      "rating": "⭐⭐⭐⭐⭐",
+      "id": 18
     }
   ]
 }

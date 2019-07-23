@@ -70,7 +70,7 @@ $('#submit').click(function (e) {
   e.preventDefault();
   let movieTitle = $('#movieName').val();
   capitalizeFirstLetter(movieTitle);
-  if(movieTitle !=='' && movieRating !== 'How many stars do you give this movie?') {
+  if(movieTitle !=='' && movieRating !== 'How many stars do you give this movie?') { console.log(movieRating)
     addMovie(movieTitle, movieRating)
         .then(movies)
         .then(editMovies)

@@ -92,6 +92,8 @@
      height:300px;
      float:left;
      text-align:center;
+     opacity:.95;
+
  }
 
 
@@ -102,6 +104,8 @@
      width:350px;
      height:300px;
      float:left;
+     opacity:.95;
+
  }
 
  #divider3{
@@ -111,6 +115,8 @@
      width:350px;
      height:300px;
      float:left;
+     opacity:.95;
+
  }
 
  #main-header{
@@ -121,4 +127,32 @@
  .divider-heading{
      font-size:25px;
      color:white;
+ }
+
+ .dividerPics{
+     width:200px;
+     height:145px;
+ }
+
+ #deleteSubmit{
+     margin-top:30px;
+ }
+
+ #editMovies{
+     width:90%;
+ }
+
+
+ #deleteMovies{
+     width:90%;
+
+ }
+ #jumbotron{
+     background-color:#F1BE61;
+     font-weight:bold;
+     font-size:20px;
+     opacity:.8;
+ }
+ #jumbotron-heading{
+     font-size:50px;
  }
