@@ -74,7 +74,7 @@ $("select#editRating").change(function(){
 //Posts data to the json, updates movies
 $('#submit').click(function (e) {
   e.preventDefault();
-  let movieTitle = $('#movieName').val();
+  let movieTitle = capitalizeFirstLetter($('#movieName').val());
   if(movieTitle !=='' && movieRating !== 'How many stars do you give this movie?') {
     addMovie(movieTitle, movieRating)
         .then(movies)
