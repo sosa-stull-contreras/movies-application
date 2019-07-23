@@ -15,6 +15,22 @@ let deleteMovieData;
 //Capitalize Letter
 const capitalizeFirstLetter = (string) => string.charAt(0).toUpperCase() + string.slice(1);
 
+$('#searchMovies').keyup(searchMovies);
+function searchMovies() {
+    const search = $('#searchMovies').val();
+    const filter = search.toUpperCase();
+    const eachMovie = $('.movie');
+    let textValue;
+    for (let i = 0; i < eachMovie.length; i++) {
+        textValue = eachMovie[i].textContent || eachMovie[i].innerText;
+        if (textValue.toUpperCase().indexOf(filter) > -1) {
+            eachMovie[i].style.display = "";
+        } else {
+            eachMovie[i].style.display = "none";
+        }
+    }
+}
+
 
 //Function populates movie list
 const movies = () =>
@@ -33,7 +49,7 @@ const movies = () =>
         let moviePost = "";
   moviePost += ' ';
   sortArray.forEach(({title, rating, poster, id}) => {
-      moviePost +=`<div class="col-4"><img src="${poster}" alt=""> <h6>${title}</h6> - Rating: ${rating}</div>`;
+      moviePost +=`<div class="col-4 movie"><img src="${poster}" alt=""> <h6 class="movieTitle">${title}</h6> - Rating: ${rating}</div>`;
   });
   $(moviePost).appendTo('#movies')
 }).catch((error) => {
