@@ -11,23 +11,14 @@ let editMovie;
 let movieRating;
 let editRating;
 let deleteMovieData;
-let poster;
 
 //Capitalize Letter
 const capitalizeFirstLetter = (string) => string.charAt(0).toUpperCase() + string.slice(1);
 
-const testing = (title) => {
-    return fetch(`http://www.omdbapi.com/?s=${title}&apikey=41424bce`)
-        .then(response => response.json())
-        .then(data => {
-            poster = data.Search[0].Poster;
-            console.log(poster)
-        })
-};
 
 //Function populates movie list
-const movies = () =>
-    getMovies().then((movies) => {
+const movies = () =>{
+    return getMovies().then((movies) => {
   $('#movies').html ("");
 // function that sorts the array alphabetically
             const sortArray =
@@ -41,14 +32,13 @@ const movies = () =>
             });
         let moviePost = "";
   moviePost += '<h1>Browse Movies!</h1> <hr>';
-  sortArray.forEach(({title, rating, id}) => {
-      testing(title);
-      moviePost +=`<div><img src=" "> <h6>${title}</h6> - Rating: ${rating}</div>`;
+  sortArray.forEach(({title, rating, poster, id}) => {
+      moviePost +=`<div><img src="${poster}" alt=""> <h6>${title}</h6> - Rating: ${rating}</div>`;
   });
   $(moviePost).appendTo('#movies')
 }).catch((error) => {
   console.log(error);
-});
+})};
 movies();
 
 
@@ -70,7 +60,7 @@ $('#submit').click(function (e) {
   e.preventDefault();
   let movieTitle = $('#movieName').val();
   capitalizeFirstLetter(movieTitle);
-  if(movieTitle !=='' && movieRating !== 'How many stars do you give this movie?') { console.log(movieRating)
+  if(movieTitle !=='' && movieRating !== 'How many stars do you give this movie?') {
     addMovie(movieTitle, movieRating)
         .then(movies)
         .then(editMovies)
@@ -82,8 +72,8 @@ $('#submit').click(function (e) {
 
 
 //Edit the star rating for movies
-const editMovies = () =>
-    getMovies().then((movies) => {
+const editMovies = () =>{
+    return getMovies().then((movies) => {
         const sortArray =
             movies.sort(function (a, b) {
                 if (a.title < b.title){
@@ -108,7 +98,7 @@ const editMovies = () =>
         }))
         .catch((error) => {
       console.log(error);
-    });
+    })};
 editMovies();
 
 
@@ -163,8 +153,8 @@ $('#editSubmit').click(function (e) {
 });
 
 //Lets you delete a movie
-const deleteMovies = () =>
-    getMovies().then((movies) => {
+const deleteMovies = () =>{
+    return getMovies().then((movies) => {
 
         const sortArray =
             movies.sort(function (a, b) {
@@ -189,7 +179,7 @@ const deleteMovies = () =>
         }))
         .catch((error) => {
             console.log(error);
-        });
+        })};
 deleteMovies();
 
 

@@ -5,9 +5,16 @@ module.exports = {
   },
 
   addMovie: (movieTitle, movieRating) => {
+    let poster;
+    fetch(`http://www.omdbapi.com/?s=${movieTitle}&r=json&apikey=41424bce`)
+          .then(response => response.json())
+          .then(data => {
+            poster = data.Search[0].Poster;
+            // console.log(poster)
       let userMovie = {
         title: movieTitle,
-        rating: movieRating
+        rating: movieRating,
+        poster: poster
       };
       const url = '/api/movies';
       const options = {
@@ -18,7 +25,8 @@ module.exports = {
         body: JSON.stringify(userMovie)
       };
       return fetch(url, options)
-    },
+          });
+  },
 
   editStars: (title, editRating, id) => {
     const userMovies = {
