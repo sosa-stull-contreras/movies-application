@@ -180,6 +180,7 @@
  #browse{
      text-align:center;
  }
- /*#searchMovies{*/
- /*    margin-top:200px;*/
- /*}*/
+ .searchDiv{
+     position:relative;
+     margin-top:270px;
+ }
